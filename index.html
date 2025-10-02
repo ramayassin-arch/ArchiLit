@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchiLit | The Harmony of Letters</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        /* Define the color palette for a sophisticated look */
+        :root {
+            --color-primary: #0A3A5A; /* Deep Navy Blue */
+            --color-secondary: #D4AF37; /* Muted Gold */
+            --color-background: #1C1C1E; /* Dark Charcoal */
+            --color-text: #E5E5E5;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+        .text-gold {
+            color: var(--color-secondary);
+        }
+        .bg-deepblue {
+            background-color: var(--color-primary);
+        }
+        .rtl-text {
+            direction: rtl;
+            text-align: right;
+        }
+        .shadow-gold {
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+        }
+        /* Custom style to represent the structural font and increased letter spacing of the logo */
+        .archilit-logo {
+            letter-spacing: 0.25em; 
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar (Updated for new section) -->
+    <header class="bg-deepblue shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex flex-col items-start">
+                <h1 class="text-2xl sm:text-3xl font-extrabold archilit-logo text-white">
+                    ARCHILIT
+                </h1>
+                <p class="text-xs sm:text-sm text-gold mt-1 font-serif uppercase tracking-wider">
+                    FOR ARCHITECTS, INTERIOR DESIGNERS & ENGINEERS
+                </p>
+            </div>
+            
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#featured" class="hover:text-gold transition duration-300">Articles</a>
+                <a href="#disciplines" class="hover:text-gold transition duration-300">Disciplines</a>
+                <!-- NEW LINK -->
+                <a href="#showcase" class="hover:text-gold transition duration-300">The Gallery</a> 
+                <a href="#about" class="hover:text-gold transition duration-300">Founder</a>
+                <a href="#submit" class="hover:text-gold transition duration-300">Submit</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg bg-gray-700 hover:bg-gold transition duration-300">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Drawer (initially hidden) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-deepblue/95 border-t border-gray-700">
+            <a href="#featured" class="block px-4 py-2 text-white hover:bg-deepblue/70">Articles</a>
+            <a href="#disciplines" class="block px-4 py-2 text-white hover:bg-deepblue/70">Disciplines</a>
+            <!-- NEW LINK -->
+            <a href="#showcase" class="block px-4 py-2 text-white hover:bg-deepblue/70">The Gallery</a>
+            <a href="#about" class="block px-4 py-2 text-white hover:bg-deepblue/70">Founder</a>
+            <a href="#submit" class="block px-4 py-2 text-white hover:bg-deepblue/70">Submit</a>
+        </div>
+    </header>
+
+    <!-- Hero Section: Defines the Magazine's Mission -->
+    <section class="py-20 md:py-32 bg-gray-800/20 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg text-gold font-medium uppercase tracking-widest mb-3">A Journal for Architectural Literature</p>
+            <h2 class="text-4xl sm:text-7xl font-black mb-6 text-white leading-tight">
+                Where Structure Meets Story.
+            </h2>
+            <p class="text-xl sm:text-2xl mb-10 font-light max-w-4xl mx-auto text-gray-300">
+                **ArchiLit** is the trilingual nexus for Architects, Interior Designers, and Engineers exploring the deep connections between rigorous professional practice and the expansive world of literature.
+            </p>
+            <a href="#featured" class="inline-block px-10 py-4 bg-gold text-deepblue font-extrabold rounded-xl hover:bg-yellow-400 transition duration-300 shadow-gold transform hover:scale-105">
+                Read the Latest Issue
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Articles Grid (Current Issue Snapshot) -->
+    <section id="featured" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold mb-10 text-center text-white border-b border-gold pb-2 max-w-xl mx-auto">
+                Issue 01: Foundations & Fictions
+            </h3>
+
+            <div id="article-grid" class="grid md:grid-cols-3 gap-8">
+
+                <!-- Article 1: Architecture/Structure (English) -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-gold transition duration-500 flex flex-col">
+                    <p class="text-sm font-semibold mb-2 text-gold">ARCHITECTURE & THE NOVEL</p>
+                    <h4 class="text-xl font-bold mb-3 text-white">
+                        Calvino's Invisible Cities and the Problem of Utopian Design
+                    </h4>
+                    <p class="text-gray-400 text-sm mb-4 flex-grow">
+                        A critical review for architects, analyzing Italo Calvino's literary structures as blueprints for impossible urban planning. (English)
+                    </p>
+                    <a href="#" class="text-gold hover:underline text-sm font-medium mt-3">View Full Article →</a>
+                </div>
+
+                <!-- Article 2: Engineering/Design (Arabic) -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-gold transition duration-500 flex flex-col">
+                    <p class="text-sm font-semibold mb-2 text-gold rtl-text">الهَنْدَسَة وَالشِّعر</p>
+                    <h4 class="text-xl font-bold mb-3 text-white rtl-text">
+                        قياس الإيقاع: البنية الهندسية للقصيدة العمودية
+                    </h4>
+                    <p class="text-gray-400 text-sm mb-4 rtl-text flex-grow">
+                        دراسة للمهندسين حول كيف تفرض بحور الشعر العربي نظامًا رياضيًا يحاكي قواعد البناء والإنشاء. (المقال باللغة العربية)
+                    </p>
+                    <a href="#" class="text-gold hover:underline text-sm font-medium rtl-text mt-3">قراءة المقال ←</a>
+                </div>
+
+                <!-- Article 3: Design/Aesthetics (French) -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-gold transition duration-500 flex flex-col">
+                    <p class="text-sm font-semibold mb-2 text-gold">DESIGN & PHILOSOPHIE</p>
+                    <h4 class="text-xl font-bold mb-3 text-white">
+                        L'Écriture comme Façade: Le Postmodernisme en Typographie
+                    </h4>
+                    <p class="text-gray-400 text-sm mb-4 flex-grow">
+                        Un essai pour designers examinant le rôle de la typographie comme élément de façade dans l'identité graphique et urbaine. (Article en Français)
+                    </p>
+                    <a href="#" class="text-gold hover:underline text-sm font-medium mt-3">Lire l'article →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Discipline Overview Section -->
+    <section id="disciplines" class="py-16 bg-deepblue/50 border-y border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+             <h3 class="text-3xl font-bold mb-8 text-white">
+                The Three Pillars of ArchiLit
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Pillar 1: Architecture -->
+                <div class="p-6 border border-gold/30 rounded-xl">
+                    <p class="text-5xl mb-3 text-gold">🏛️</p>
+                    <h4 class="text-xl font-semibold text-white mb-2">Architecture</h4>
+                    <p class="text-sm text-gray-400">
+                        Examining the built environment through poetic, philosophical, and narrative lenses. From Le Corbusier to Moroccan Riad tradition.
+                    </p>
+                </div>
+                
+                <!-- Pillar 2: Engineering & Design -->
+                <div class="p-6 border border-gold/30 rounded-xl">
+                    <p class="text-5xl mb-3 text-gold">📐</p>
+                    <h4 class="text-xl font-semibold text-white mb-2">Engineering & Design</h4>
+                    <p class="text-sm text-gray-400">
+                        Analyzing the structure of novels, screenplays, and verse as models for elegant, functional, and efficient design solutions.
+                    </p>
+                </div>
+                
+                <!-- Pillar 3: Literature -->
+                <div class="p-6 border border-gold/30 rounded-xl">
+                    <p class="text-5xl mb-3 text-gold">✒️</p>
+                    <h4 class="text-xl font-semibold text-white mb-2">Literary Arts</h4>
+                    <p class="text-sm text-gray-400">
+                        Showcasing new fiction, poetry, and critical essays in Arabic, French, and English, often inspired by physical space and structure.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- NEW SECTION: The ArchiLit Gallery (Showcase for Student/Pro Work) -->
+    <section id="showcase" class="py-16 md:py-24 bg-deepblue/20 border-b border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold mb-4 text-center text-white">
+                The ArchiLit Gallery: Structure in Action
+            </h3>
+            <p class="text-xl font-light text-center text-gray-400 mb-12 max-w-4xl mx-auto">
+                A dedicated space for architects, designers, and students to showcase projects that embody narrative, structural poetry, or cultural critique.
+            </p>
+
+            <div id="project-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Project Card 1: Student Architecture -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-gold transition duration-500">
+                    <div class="h-40 bg-gray-700 flex items-center justify-center text-gray-400">
+                        [Project Image Placeholder]
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-white mb-1">
+                            The Narrative Museum (Student Project)
+                        </h4>
+                        <p class="text-gold text-sm mb-3">Architecture, Rama Yassin (Founder's Pick)</p>
+                        <!-- Space for "some words below" -->
+                        <p class="text-gray-400 text-xs italic">
+                            "The design captures the linear narrative of a journey, translating the act of reading into spatial sequence."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Professional Interior Design -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-gold transition duration-500">
+                    <div class="h-40 bg-gray-700 flex items-center justify-center text-gray-400">
+                        [Project Image Placeholder]
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-white mb-1">
+                            Rabat Library Refit
+                        </h4>
+                        <p class="text-gold text-sm mb-3">Interior Design, Omar K. Architects</p>
+                        <p class="text-gray-400 text-xs italic">
+                            "A space designed for contemplation, using light and shadow to reflect the rhythm of classic poetry."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Engineering/Structure -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-gold transition duration-500">
+                    <div class="h-40 bg-gray-700 flex items-center justify-center text-gray-400">
+                        [Project Image Placeholder]
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-white mb-1">
+                            Kinetic Bridge Prototype
+                        </h4>
+                        <p class="text-gold text-sm mb-3">Structural Engineering, Ayman F.</p>
+                        <p class="text-gray-400 text-xs italic">
+                            "Inspired by the unfolding structure of a sonnet, the bridge moves with a calculated, elegant cadence."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: Conceptual Design -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-gold transition duration-500">
+                    <div class="h-40 bg-gray-700 flex items-center justify-center text-gray-400">
+                        [Project Image Placeholder]
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-white mb-1">
+                            The Ephemeral City
+                        </h4>
+                        <p class="text-gold text-sm mb-3">Conceptual Design, Z. Halabi</p>
+                        <p class="text-gray-400 text-xs italic">
+                            "A design critique of temporality, drawing inspiration from short-form fiction and desert tents."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                 <a href="#submit" class="inline-block px-8 py-3 bg-gold text-deepblue font-semibold rounded-xl hover:bg-yellow-400 transition duration-300">
+                    Submit Your Project to The Gallery
+                </a>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- Founder Section: Rama Yassin (MOVED DOWN) -->
+    <section id="about" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- UPDATED HEADING -->
+            <h3 class="text-3xl font-bold mb-12 text-center text-white border-b border-gold pb-2 max-w-xl mx-auto">
+                The Visionary: Rama Yassin
+            </h3>
+
+            <!-- UPDATED LAYOUT TO SINGLE COLUMN -->
+            <div class="max-w-3xl mx-auto">
+                
+                <!-- Founder 1: Rama Yassin -->
+                <div class="flex flex-col items-center text-center p-6 bg-gray-800/50 rounded-xl">
+                    <div class="w-24 h-24 rounded-full bg-gray-700 border-4 border-gold flex items-center justify-center text-3xl text-white font-serif tracking-widest mb-4">
+                        RY
+                    </div>
+                    <h4 class="text-2xl font-bold mb-1 text-white">Rama Yassin</h4>
+                    <p class="text-gold font-semibold mb-4 text-sm">
+                        Syrian Moroccan Author, Architecture Student, and Founder
+                    </p>
+                    <p class="text-gray-300">
+                        **ArchiLit** was born from Rama's pursuit of the **"fine line between writing and architecture."** An alumna of the Olive Writer creative program and a competition participant, she established this journal to foster an intellectual space where the discipline of design meets the freedom of expression. Her vision connects rigorous technical practice with unbridled artistic expression, celebrating both Moroccan intellectual heritage and global creative discourse.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission CTA (Unchanged) -->
+    <section id="submit" class="py-12 bg-deepblue/20 border-t border-gray-700 text-center">
+        <h3 class="text-2xl font-bold mb-4 text-white">
+            Contribute to the Harmony.
+        </h3>
+        <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
+            We are currently accepting original articles, essays, fiction, and poetry that creatively link the principles of Structure (Architecture, Engineering, Design) with the art of Expression (Literature).
+        </p>
+        <a href="#" class="inline-block px-8 py-3 border border-gold text-gold font-semibold rounded-xl hover:bg-gold hover:text-deepblue transition duration-300 transform hover:scale-105">
+            View Submission Guidelines
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deepblue py-8 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+            <!-- REMOVED "وئام الحروف" -->
+            <p>&copy; <span id="year"></span> ArchiLit. Founded by Rama Yassin.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-gold">Privacy Policy</a>
+                <a href="#" class="hover:text-gold">Contact Editor</a>
+                <a href="#" class="hover:text-gold">Social Media</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Navigation Toggle Logic
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuButton) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
